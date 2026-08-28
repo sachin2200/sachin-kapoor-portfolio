@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Articles and field notes from Sachin Kapoor on technology leadership, content strategy, intelligent automation, .NET engineering, cloud, AI, ITSM, and enterprise operations."
+    />
+    <meta name="author" content="Sachin Kapoor" />
+    <meta name="theme-color" content="#0d3340" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Insights | Sachin Kapoor" />
+    <meta
+      property="og:description"
+      content="Practical perspectives on technology leadership, content strategy, automation, engineering, and enterprise operations."
+    />
+    <meta
+      property="og:url"
+      content="https://sachin-kapoor.com/blog/"
+    />
+    <meta
+      property="og:image"
+      content="https://sachin-kapoor.com/assets/images/profile-photo.png"
+    />
+    <meta property="og:image:alt" content="Portrait of Sachin Kapoor" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Insights | Sachin Kapoor" />
+    <meta
+      name="twitter:description"
+      content="Practical perspectives on technology leadership, content strategy, automation, engineering, and enterprise operations."
+    />
+    <link
+      rel="canonical"
+      href="https://sachin-kapoor.com/blog/"
+    />
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/images/profile-photo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        document.documentElement.dataset.theme = savedTheme || preferredTheme;
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="posts-data.js" defer></script>
+    <script src="../assets/js/blog.js" defer></script>
+    <title>Insights | Sachin Kapoor</title>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" data-header>
+      <div class="container nav-shell">
+        <a class="brand" href="../" aria-label="Sachin Kapoor — Portfolio home">
+          <span class="brand-mark" aria-hidden="true">SK</span>
+          <span class="brand-name">Sachin Kapoor</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+          <a href="../#about">About</a>
+          <a href="../#focus">Strategy</a>
+          <a href="../#experience">Experience</a>
+          <a href="../#skills">Skills</a>
+          <a href="../#projects">Projects</a>
+          <a href="./" aria-current="page">Blog</a>
+          <a href="../#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="icon-button theme-toggle"
+            type="button"
+            aria-label="Switch color theme"
+            title="Switch color theme"
+            data-theme-toggle
+          >
+            <span class="theme-icon" aria-hidden="true">◐</span>
+          </button>
+          <button
+            class="icon-button menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="site-nav"
+            aria-expanded="false"
+            data-menu-toggle
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="blog-hero" aria-labelledby="blog-title">
+        <div class="blog-orb" aria-hidden="true"></div>
+        <div class="container blog-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Insights &amp; field notes</p>
+            <h1 id="blog-title">Ideas on technology, operations, and meaningful transformation.</h1>
+          </div>
+          <div class="blog-hero-aside reveal" data-delay="80">
+            <p>
+              Practical perspectives shaped by enterprise leadership, hands-on engineering,
+              content platforms, automation, AI, reliability, and continuous improvement.
+            </p>
+            <ul class="blog-topic-list" aria-label="Blog topics">
+              <li>Leadership</li>
+              <li>Content Strategy</li>
+              <li>Automation &amp; AI</li>
+              <li>.NET &amp; Cloud</li>
+              <li>ITSM &amp; SRE</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section blog-listing" aria-labelledby="latest-writing-title">
+        <div class="container">
+          <div class="blog-listing-header reveal">
+            <div>
+              <p class="eyebrow">The blog</p>
+              <h2 id="latest-writing-title">Latest writing</h2>
+            </div>
+            <p data-result-count aria-live="polite">Loading articles…</p>
+          </div>
+
+          <div class="blog-controls reveal" data-delay="60" aria-label="Filter articles">
+            <div class="blog-search">
+              <label for="blog-search">Search articles</label>
+              <input
+                id="blog-search"
+                type="search"
+                placeholder="Search by title, topic, or keyword"
+                autocomplete="off"
+                data-blog-search
+              />
+            </div>
+            <div class="blog-filter">
+              <label for="blog-category">Category</label>
+              <select id="blog-category" data-blog-category>
+                <option value="all">All categories</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="blog-grid" data-blog-grid></div>
+
+          <div class="blog-empty reveal" data-blog-empty>
+            <span aria-hidden="true">✦</span>
+            <h3>New articles are on the way.</h3>
+            <p>
+              This blog is ready for publishing. New perspectives on technology leadership,
+              engineering, content strategy, and automation will appear here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-connect" aria-labelledby="blog-connect-title">
+        <div class="container blog-connect-grid reveal">
+          <div>
+            <p class="eyebrow">Continue the conversation</p>
+            <h2 id="blog-connect-title">Have a perspective to share?</h2>
+          </div>
+          <div>
+            <p>
+              Connect with me to discuss enterprise technology, leadership, content strategy,
+              intelligent automation, or an idea from the blog.
+            </p>
+            <a
+              class="button button-primary"
+              href="https://www.linkedin.com/in/sachin-kapoor-4068a024/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="../" aria-label="Portfolio home">
+            <span class="brand-mark" aria-hidden="true">SK</span>
+            <span class="brand-name">Sachin Kapoor</span>
+          </a>
+          <p>Technology &amp; Operations Leader · Hyderabad, India</p>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Portfolio</a>
+          <a
+            href="https://www.linkedin.com/in/sachin-kapoor-4068a024/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn <span aria-hidden="true">↗</span></a>
+          <a
+            href="https://github.com/sachin2200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:sachin.kapoor.2200@gmail.com">Email</a>
+          <a href="../assets/resume/Sachin_Kapoor_2026.pdf" download>Resume ↓</a>
+        </div>
+        <p class="copyright">© <span data-current-year>2026</span> Sachin Kapoor. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
