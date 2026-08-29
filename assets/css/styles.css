@@ -1261,6 +1261,10 @@ h3 {
   margin: 0 40px 0 0;
 }
 
+.credentials-grid .section-heading h2 {
+  font-size: clamp(2.5rem, 3.45vw, 3.65rem);
+}
+
 .credential-column {
   display: grid;
   gap: 18px;
