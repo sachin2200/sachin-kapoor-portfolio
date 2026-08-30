@@ -57,6 +57,8 @@
     time.dateTime = post.date;
     meta.append(time);
 
+    const context = createElement("p", "blog-card-context", post.context || "Field note");
+
     const title = createElement("h3");
     const titleLink = createElement("a", "", post.title);
     titleLink.href = post.url;
@@ -70,7 +72,7 @@
     readLink.setAttribute("aria-label", `Read ${post.title}`);
     footer.append(readLink);
 
-    body.append(meta, title, excerpt, footer);
+    body.append(meta, context, title, excerpt, footer);
     article.append(body);
     return article;
   };
@@ -85,10 +87,15 @@
 
   const renderPosts = () => {
     const query = searchInput.value.trim().toLowerCase();
+    const queryTerms = query.split(/\s+/).filter(Boolean);
     const category = categorySelect.value;
     const filteredPosts = posts.filter((post) => {
-      const searchableText = `${post.title} ${post.excerpt} ${post.category}`.toLowerCase();
-      return searchableText.includes(query) && (category === "all" || post.category === category);
+      const searchableText = `${post.title} ${post.excerpt} ${post.category} ${post.context || ""}`.toLowerCase();
+      const searchableWords = searchableText.split(/[^a-z0-9+#.]+/).filter(Boolean);
+      const matchesQuery = queryTerms.every((term) =>
+        searchableWords.some((word) => word.startsWith(term)),
+      );
+      return matchesQuery && (category === "all" || post.category === category);
     });
 
     grid.replaceChildren(...filteredPosts.map(createCard));
