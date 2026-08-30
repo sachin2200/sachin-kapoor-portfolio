@@ -14,7 +14,8 @@ A responsive, one-page portfolio built with semantic HTML, modern CSS, and light
 │   ├── index.html
 │   ├── posts-data.js
 │   └── posts/
-│       └── post-template.html
+│       ├── post-template.html
+│       └── 10 published leadership and technology articles
 ├── assets/
 │   ├── css/styles.css
 │   ├── css/blog.css
@@ -69,7 +70,7 @@ The blog uses individual HTML files so every article has its own shareable, sear
 6. Test the blog locally at `http://localhost:8000/blog/`.
 7. Commit and push both the article file and `blog/posts-data.js`. GitHub Pages will publish them with the rest of the site.
 
-The blog page automatically sorts articles by newest date and supports keyword search and category filtering. Set `featured: true` only for an article you want to emphasize. An optional `image` property may point to a local image, such as `../assets/images/blog/article-cover.jpg`.
+The blog page automatically sorts articles by newest date and supports keyword search and category filtering. Set `featured: true` only for an article you want to emphasize. An optional `image` property may point to a local image, such as `../assets/images/blog/article-cover.jpg`. Keep `sitemap.xml` updated when publishing or removing an article.
 
 ## Configured values
 
