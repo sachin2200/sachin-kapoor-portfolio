@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sachin Kapoor reflects on leading architecture and delivery for Sodexo retail platforms Retail Ranger, Bite, and Bite University through CGI Inc. and Netlink Software Group." />
+    <meta name="author" content="Sachin Kapoor" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Leading cloud-native retail platforms from architecture to operations" />
+    <meta property="og:description" content="Lessons from translating retail journeys into .NET microservices, delivery standards, telemetry, and production support models." />
+    <meta property="og:url" content="https://sachin-kapoor.com/blog/posts/cloud-native-retail-platform-leadership.html" />
+    <meta property="og:image" content="https://sachin-kapoor.com/assets/images/profile-photo.png" />
+    <meta property="article:published_time" content="2026-08-30" />
+    <meta property="article:author" content="Sachin Kapoor" />
+    <meta property="article:section" content="Engineering Leadership" />
+    <link rel="canonical" href="https://sachin-kapoor.com/blog/posts/cloud-native-retail-platform-leadership.html" />
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/blog.css?v=20260830" />
+    <script>document.documentElement.classList.add("js");try{document.documentElement.dataset.theme=localStorage.getItem("portfolio-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(error){document.documentElement.dataset.theme="light"}</script>
+    <script src="../../assets/js/main.js" defer></script>
+    <title>Leading cloud-native retail platforms from architecture to operations | Sachin Kapoor</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#article-content">Skip to article</a>
+    <header class="site-header" data-header><div class="container nav-shell"><a class="brand" href="../../" aria-label="Sachin Kapoor portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="../../">Portfolio</a><a href="../" aria-current="page">Blog</a><a href="../../#contact">Contact</a></nav><div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme" data-theme-toggle><span class="theme-icon" aria-hidden="true">◐</span></button><button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div></div></header>
+    <main class="article-main" id="article-content">
+      <article class="article-shell">
+        <a class="article-back" href="../">← Back to all articles</a>
+        <header class="article-header">
+          <p class="eyebrow">Engineering Leadership</p>
+          <h1>Leading cloud-native retail platforms from architecture to operations</h1>
+          <p class="article-deck">What Retail Ranger, Bite, and Bite University taught me about translating customer journeys into architecture, team standards, telemetry, and support.</p>
+          <div class="article-meta"><span>By Sachin Kapoor</span><time datetime="2026-08-30">30 August 2026</time><span>7 min read</span></div>
+          <dl class="article-context"><div><dt>Previous-organization context</dt><dd>Sodexo via CGI Inc. / Netlink</dd></div><div><dt>Role</dt><dd>Manager Consulting Expert / Architect</dd></div></dl>
+        </header>
+        <div class="article-content">
+          <p>Retail platforms are experienced as a simple sequence of actions: find a location, view a menu, personalize a choice, place an order, receive a promotion, give feedback, or manage a unit. Behind that journey is a network of services, data, rules, integrations, releases, and operational commitments.</p>
+          <p>From 2018 to 2021, I led architecture and delivery for Sodexo's Retail Ranger, Bite, and Bite University platforms through CGI Inc. and Netlink Software Group. I directed a 10+ member onsite/offshore team and translated business needs into architecture, estimates, delivery plans, engineering standards, and production support models.</p>
+          <p>This experience strengthened the leadership approach I still use: architecture is not a diagram produced before delivery. It is a set of decisions that must remain understandable, testable, observable, and operable throughout the product lifecycle.</p>
+
+          <h2>Begin with journeys and capabilities</h2>
+          <p>I worked backward from retail journeys into the capabilities the platform needed: location discovery, menu personalization, ordering, promotions, feedback, learning, and unit-manager operations. This helps the team avoid organizing the solution around screens or temporary project boundaries.</p>
+          <p>Capability boundaries also create better conversations with business stakeholders. Instead of discussing a technical component in isolation, the team can explain which journey it enables, which rules it owns, and what failure means to the user.</p>
+
+          <h2>Use layers to make change safer</h2>
+          <p>The solutions used .NET Core/.NET 5, C#, ASP.NET Web API, Angular, Azure PaaS, Azure Functions, SQL Server, and Azure DevOps. I led the design and delivery of web/mobile, API, domain, service, and repository layers using Entity Framework, ADO.NET, LINQ, and stored procedures.</p>
+          <p>The purpose of layers was not architectural ceremony. It was to create clear responsibility, make business behavior testable, limit the effect of change, and let teams reason about the system. A good boundary should help a developer answer: where does this rule belong, what can it depend on, and how will we know if it fails?</p>
+
+          <h2>Lead the team through engineering standards</h2>
+          <ul class="principle-list">
+            <li><strong>Make decisions visible</strong>Capture the reason, trade-off, and consequence behind important architecture choices.</li>
+            <li><strong>Define interfaces deliberately</strong>APIs and service contracts need ownership, validation, versioning, failure behavior, and useful error handling.</li>
+            <li><strong>Build quality into delivery</strong>Code review, automated testing, CI/CD, environment control, and release evidence should be part of normal flow.</li>
+            <li><strong>Plan across onsite and offshore work</strong>Clear outcomes, dependency visibility, shared standards, and overlap for high-risk decisions reduce coordination loss.</li>
+            <li><strong>Connect delivery and support</strong>The people building a capability should understand its telemetry, failure modes, runbooks, and production expectations.</li>
+          </ul>
+
+          <h2>Make telemetry an architecture feature</h2>
+          <p>I implemented Application Insights telemetry and managed CI/CD across QA, onboarding, and production. Telemetry was not an afterthought for the support team. It was part of how we understood requests, dependencies, performance, failures, and user journeys.</p>
+          <p>An observable platform improves both operations and delivery. Teams can diagnose production behavior, validate a release, compare environments, identify performance constraints, and turn recurring failures into backlog work.</p>
+
+          <h2>Design the support model before launch</h2>
+          <p>My responsibility included production support models as well as architecture and delivery. That combination changed design discussions. Ownership, escalation, deployment, data correction, rollback, availability, and knowledge had to be resolved while the people who understood the product were still engaged.</p>
+          <p>This is one reason I continue to emphasize transition and operational readiness in leadership roles. Products create value after launch. A platform that cannot be understood and sustained has not completed its architecture.</p>
+
+          <blockquote>The architecture that matters is the one a team can evolve confidently and operate responsibly after the original project has moved on.</blockquote>
+
+          <h2>Closing perspective</h2>
+          <p>Retail Ranger, Bite, and Bite University combined business journeys, Microsoft engineering, microservices, data access, Azure delivery, and production operations. Leading that work required technical depth and a system for team decisions.</p>
+          <p>The experience shaped my progression from hands-on architecture to broader technology and operations leadership. I still use the same foundation: begin with outcomes, make boundaries and trade-offs visible, build quality and telemetry into the flow, and treat operability as part of the product.</p>
+          <p class="article-disclosure"><strong>Professional note:</strong> This article reflects my leadership experience and personal perspective from work delivered with cross-functional teams. Examples are intentionally generalized and do not disclose confidential company information.</p>
+        </div>
+        <aside class="article-author" aria-label="About the author"><img src="../../assets/images/profile-photo.png" width="70" height="70" alt="Portrait of Sachin Kapoor" /><div><h2>Sachin Kapoor</h2><p>Technology &amp; Operations Leader specializing in GCC leadership, enterprise content strategy, intelligent automation, Microsoft engineering, AI, ITSM, and SRE.</p></div></aside>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../../" aria-label="Portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><p>Technology &amp; Operations Leader · Hyderabad, India</p></div><div class="footer-links"><a href="../">Blog</a><a href="../../#contact">Contact</a></div><p class="copyright">© <span data-current-year>2026</span> Sachin Kapoor. All rights reserved.</p></div></footer>
+  </body>
+</html>

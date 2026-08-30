@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sachin Kapoor shares leadership lessons from Kognito-based AI ticket triage and Oscar, a RAG-enabled enterprise support experience at PepsiCo GCC." />
+    <meta name="author" content="Sachin Kapoor" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Designing AI triage and RAG self-service for enterprise support" />
+    <meta property="og:description" content="How to lead AI-enabled service support with confidence thresholds, grounded knowledge, human escalation, and measurable ownership." />
+    <meta property="og:url" content="https://sachin-kapoor.com/blog/posts/ai-triage-rag-enterprise-support.html" />
+    <meta property="og:image" content="https://sachin-kapoor.com/assets/images/profile-photo.png" />
+    <meta property="article:published_time" content="2026-08-30" />
+    <meta property="article:author" content="Sachin Kapoor" />
+    <meta property="article:section" content="Automation &amp; AI" />
+    <link rel="canonical" href="https://sachin-kapoor.com/blog/posts/ai-triage-rag-enterprise-support.html" />
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/blog.css?v=20260830" />
+    <script>document.documentElement.classList.add("js");try{document.documentElement.dataset.theme=localStorage.getItem("portfolio-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(error){document.documentElement.dataset.theme="light"}</script>
+    <script src="../../assets/js/main.js" defer></script>
+    <title>Designing AI triage and RAG self-service for enterprise support | Sachin Kapoor</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#article-content">Skip to article</a>
+    <header class="site-header" data-header><div class="container nav-shell"><a class="brand" href="../../" aria-label="Sachin Kapoor portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="../../">Portfolio</a><a href="../" aria-current="page">Blog</a><a href="../../#contact">Contact</a></nav><div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme" data-theme-toggle><span class="theme-icon" aria-hidden="true">◐</span></button><button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div></div></header>
+    <main class="article-main" id="article-content">
+      <article class="article-shell">
+        <a class="article-back" href="../">← Back to all articles</a>
+        <header class="article-header">
+          <p class="eyebrow">Automation &amp; AI</p>
+          <h1>Designing AI triage and RAG self-service for enterprise support</h1>
+          <p class="article-deck">Lessons from leading AI-enabled service experiences with guardrails for confidence, knowledge, ownership, and human escalation.</p>
+          <div class="article-meta"><span>By Sachin Kapoor</span><time datetime="2026-08-30">30 August 2026</time><span>7 min read</span></div>
+          <dl class="article-context"><div><dt>Experience context</dt><dd>PepsiCo GCC</dd></div><div><dt>Solutions led</dt><dd>Kognito AI triage · Oscar RAG support</dd></div></dl>
+        </header>
+        <div class="article-content">
+          <p>Enterprise support creates two different information problems. The first is routing: understanding a request well enough to get it to the right team. The second is resolution: finding a trusted answer quickly enough to help the user or support professional act.</p>
+          <p>At PepsiCo GCC, I led Kognito-based AI triage for misrouted tickets and conceived Oscar, a user-facing RAG-enabled ITSM chatbot for guided self-service and standardized responses. I later expanded the AI-led operations roadmap with an SRE agent, email-to-ticket automation, RAG analytics, and agentic integration patterns.</p>
+          <p>The leadership lesson was not that AI can replace a service organization. It was that AI can make the service system easier to navigate - if the operating model around the model is designed deliberately.</p>
+
+          <h2>Choose problems with a visible cost of friction</h2>
+          <p>Misrouted tickets create avoidable queue time, repeated reassignment, unclear ownership, and user frustration. Knowledge search creates a different form of delay: support professionals and users may find multiple documents, outdated guidance, or no clear answer.</p>
+          <p>Both are good AI candidates because the current friction is observable and a human fallback already exists. That gives the team a baseline, a safe escalation path, and meaningful measures beyond a model demo.</p>
+
+          <h2>Separate classification from authority</h2>
+          <p>An AI classifier can recommend a category or assignment group. That does not mean it should always make the final decision. I treat confidence as an operating input. High-confidence, low-risk patterns may be automated. Lower-confidence or high-impact cases should be routed to human review with the recommendation and evidence visible.</p>
+          <p>This separation protects service quality and creates a learning loop. Overrides are not failures to hide; they are labeled feedback that can improve data, prompts, rules, knowledge, or the model.</p>
+
+          <h2>Ground answers in governed knowledge</h2>
+          <p>RAG improves usefulness by retrieving relevant enterprise content before generating a response. But retrieval only helps if the source knowledge is trustworthy. Oscar therefore represents a service-management challenge as much as an AI challenge.</p>
+          <ul class="principle-list">
+            <li><strong>Curate the source set</strong>Index approved, relevant content rather than everything that can be reached.</li>
+            <li><strong>Assign knowledge ownership</strong>Every important article needs a steward, review cycle, version, and retirement path.</li>
+            <li><strong>Expose grounding</strong>Users and support teams should be able to understand which source informed the answer.</li>
+            <li><strong>Design an escalation path</strong>The experience must say when it is uncertain and make hand-off to the right team straightforward.</li>
+            <li><strong>Protect access boundaries</strong>Retrieval must respect the permissions, sensitivity, and service context of the person asking.</li>
+          </ul>
+
+          <h2>Measure the service outcome</h2>
+          <p>Model accuracy is important but insufficient. For triage, I look at reassignment patterns, time to correct ownership, confidence distribution, overrides, and the downstream effect on MTTR and SLA performance. For RAG self-service, useful measures include grounded-answer quality, escalation rate, unresolved questions, knowledge gaps, repeat usage, and the consistency of support responses.</p>
+          <p>These measures keep AI connected to the operating objective. They also help distinguish a problem in the model from a problem in the underlying process or knowledge base.</p>
+
+          <h2>Create ownership across the lifecycle</h2>
+          <p>AI-enabled support crosses product, service management, engineering, security, data, knowledge, and operations. I make responsibilities explicit: who owns the use case, the source content, the model behavior, the integration, the controls, the performance review, and the decision to expand or pause automation.</p>
+          <p>Without that ownership, a pilot can appear successful while the knowledge grows stale or exception handling remains manual. With it, the capability can be operated and improved like any other enterprise service.</p>
+
+          <blockquote>Responsible AI in operations is not a disclaimer attached to a model. It is a set of decision rights, controls, evidence, and human hand-offs built into the service.</blockquote>
+
+          <h2>Closing perspective</h2>
+          <p>Kognito-based triage and Oscar demonstrated two practical roles for AI: reducing the distance to the right owner and reducing the distance to a trusted answer. Their value depended on grounded knowledge, confidence-aware automation, visible fallback, and service measures.</p>
+          <p>That remains my approach to AI-led operations. Start with a real point of friction. Define the safe decision boundary. Keep ownership visible. Learn from overrides. Expand only when the service outcome supports it.</p>
+          <p class="article-disclosure"><strong>Professional note:</strong> This article reflects my leadership experience and personal perspective. Examples are intentionally generalized and do not disclose confidential company information.</p>
+        </div>
+        <aside class="article-author" aria-label="About the author"><img src="../../assets/images/profile-photo.png" width="70" height="70" alt="Portrait of Sachin Kapoor" /><div><h2>Sachin Kapoor</h2><p>Technology &amp; Operations Leader specializing in GCC leadership, enterprise content strategy, intelligent automation, Microsoft engineering, AI, ITSM, and SRE.</p></div></aside>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../../" aria-label="Portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><p>Technology &amp; Operations Leader · Hyderabad, India</p></div><div class="footer-links"><a href="../">Blog</a><a href="../../#contact">Contact</a></div><p class="copyright">© <span data-current-year>2026</span> Sachin Kapoor. All rights reserved.</p></div></footer>
+  </body>
+</html>

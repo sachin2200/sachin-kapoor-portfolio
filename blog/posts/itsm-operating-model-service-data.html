@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sachin Kapoor shares how he established an end-to-end ITSM and SRE operating model at PepsiCo GCC to connect service data with ownership and continuous improvement." />
+    <meta name="author" content="Sachin Kapoor" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Building an ITSM operating model that turns service data into action" />
+    <meta property="og:description" content="A practical approach to connecting ITSM processes, SRE signals, governance, and improvement." />
+    <meta property="og:url" content="https://sachin-kapoor.com/blog/posts/itsm-operating-model-service-data.html" />
+    <meta property="og:image" content="https://sachin-kapoor.com/assets/images/profile-photo.png" />
+    <meta property="article:published_time" content="2026-08-30" />
+    <meta property="article:author" content="Sachin Kapoor" />
+    <meta property="article:section" content="ITSM &amp; SRE" />
+    <link rel="canonical" href="https://sachin-kapoor.com/blog/posts/itsm-operating-model-service-data.html" />
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/blog.css?v=20260830" />
+    <script>document.documentElement.classList.add("js");try{document.documentElement.dataset.theme=localStorage.getItem("portfolio-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(error){document.documentElement.dataset.theme="light"}</script>
+    <script src="../../assets/js/main.js" defer></script>
+    <title>Building an ITSM operating model that turns service data into action | Sachin Kapoor</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#article-content">Skip to article</a>
+    <header class="site-header" data-header><div class="container nav-shell"><a class="brand" href="../../" aria-label="Sachin Kapoor portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="../../">Portfolio</a><a href="../" aria-current="page">Blog</a><a href="../../#contact">Contact</a></nav><div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme" data-theme-toggle><span class="theme-icon" aria-hidden="true">◐</span></button><button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div></div></header>
+    <main class="article-main" id="article-content">
+      <article class="article-shell">
+        <a class="article-back" href="../">← Back to all articles</a>
+        <header class="article-header">
+          <p class="eyebrow">ITSM &amp; SRE</p>
+          <h1>Building an ITSM operating model that turns service data into action</h1>
+          <p class="article-deck">My approach to connecting incident, problem, change, release, knowledge, service levels, observability, and continuous improvement.</p>
+          <div class="article-meta"><span>By Sachin Kapoor</span><time datetime="2026-08-30">30 August 2026</time><span>7 min read</span></div>
+          <dl class="article-context"><div><dt>Experience context</dt><dd>PepsiCo GCC</dd></div><div><dt>Practice scope</dt><dd>ITSM · SRE · Application operations</dd></div></dl>
+        </header>
+        <div class="article-content">
+          <p>An ITSM tool can record activity without creating operational control. Tickets close, dashboards refresh, and weekly reports circulate, yet the same failure can still return because the processes are not connected to ownership and learning.</p>
+          <p>At PepsiCo GCC, I established an end-to-end ITSM operating model across incident, request, problem, change, release, knowledge, service-level management, and governance. In parallel, I embedded SRE practices including observability, SLOs, error budgets, health checks, and operational readiness. The value came from treating these as one service system rather than two competing methodologies.</p>
+
+          <h2>Begin with a service, not a queue</h2>
+          <p>A queue-centered model optimizes assignment. A service-centered model optimizes outcomes. I start by defining the service boundary, users, critical journeys, owners, dependencies, support tiers, service commitments, and business calendar.</p>
+          <p>That context makes operational data meaningful. An incident count by itself says little. The same count mapped to a critical journey, a recent release, a recurring component, or a service objective can identify where leadership attention is required.</p>
+
+          <h2>Connect the management processes</h2>
+          <p>The operating model should make one process the input to another. Otherwise, each team can meet its local target while the service continues to degrade.</p>
+          <ul class="principle-list">
+            <li><strong>Incident to problem</strong>Recurring symptoms, major incidents, and avoidable escalations should create a structured path to root-cause ownership and corrective action.</li>
+            <li><strong>Change to reliability</strong>Change outcomes, failed deployments, rollbacks, and post-release incidents should inform release controls and engineering priorities.</li>
+            <li><strong>Knowledge to first-contact resolution</strong>Useful knowledge must be discoverable, current, owned, and measured through actual support behavior.</li>
+            <li><strong>Service levels to improvement</strong>SLA and SLO trends should trigger a conversation about system conditions, not simply an explanation for a missed number.</li>
+            <li><strong>Observability to response</strong>Alerts and telemetry must connect to a responder, diagnostic path, escalation model, and service priority.</li>
+          </ul>
+
+          <h2>Design governance around decisions</h2>
+          <p>I use different governance rhythms for immediate operations, recurring improvement, and leadership oversight. Daily or near-real-time control focuses on restoration and active risk. Weekly service review focuses on patterns, problem progress, change quality, SLA risk, and knowledge gaps. Portfolio reviews focus on material trends, cross-service dependencies, investment, and capability.</p>
+          <p>Every forum needs a decision purpose. If a review merely reads a dashboard, it is consuming the time that should be spent removing constraints. I expect each material item to end with an owner, action, due date, and the evidence that will show improvement.</p>
+
+          <h2>Use a balanced measurement system</h2>
+          <p>Metrics such as MTTR, SLA breaches, FCR, incident trends, problem aging, change outcomes, and service availability can guide action. I balance lagging outcomes with leading signals: alert quality, health-check coverage, release readiness, known-error currency, runbook effectiveness, and closure of corrective actions.</p>
+          <p>I also avoid treating a single metric as a performance grade. A faster MTTR can be positive, but not if teams are repeatedly restoring the same failure. A high change-success rate can be misleading if teams avoid necessary change. The leadership task is to read the system, not worship the number.</p>
+
+          <h2>Bring SRE and ITSM together</h2>
+          <p>SRE contributes engineering mechanisms: observable services, measurable objectives, error-budget thinking, automation, and learning from failure. ITSM contributes enterprise coordination: defined processes, service ownership, communication, auditability, and cross-team governance.</p>
+          <p>I connect them through shared service objectives and shared evidence. An SLO becomes relevant to incident priority and investment. A problem record becomes part of the engineering backlog. A release gate includes operational readiness. An error budget informs the conversation between feature flow and reliability work.</p>
+
+          <blockquote>Service management becomes a leadership capability when every operational signal has a path to ownership, decision, and learning.</blockquote>
+
+          <h2>Closing perspective</h2>
+          <p>The objective is not perfect process compliance. It is a reliable service organization that detects meaningful signals, responds with clarity, learns from recurrence, and makes improvement visible.</p>
+          <p>My ITSM operating model was built around that flow. Tools and metrics provide the evidence; roles and cadences create accountability; engineering practices change the system. When those elements work together, service data stops being a report and starts becoming an operating advantage.</p>
+          <p class="article-disclosure"><strong>Professional note:</strong> This article reflects my leadership experience and personal perspective. Examples are intentionally generalized and do not disclose confidential company information.</p>
+        </div>
+        <aside class="article-author" aria-label="About the author"><img src="../../assets/images/profile-photo.png" width="70" height="70" alt="Portrait of Sachin Kapoor" /><div><h2>Sachin Kapoor</h2><p>Technology &amp; Operations Leader specializing in GCC leadership, enterprise content strategy, intelligent automation, Microsoft engineering, AI, ITSM, and SRE.</p></div></aside>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../../" aria-label="Portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><p>Technology &amp; Operations Leader · Hyderabad, India</p></div><div class="footer-links"><a href="../">Blog</a><a href="../../#contact">Contact</a></div><p class="copyright">© <span data-current-year>2026</span> Sachin Kapoor. All rights reserved.</p></div></footer>
+  </body>
+</html>

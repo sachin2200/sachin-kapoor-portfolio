@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sachin Kapoor shares the readiness and acceptance model he used to standardize Transition to Sustain and Release to Sustain across 45+ applications at PepsiCo GCC." />
+    <meta name="author" content="Sachin Kapoor" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Make transition-to-sustain a leadership discipline" />
+    <meta property="og:description" content="A practical model for replacing late operational hand-offs with evidence, ownership, hypercare, and explicit acceptance." />
+    <meta property="og:url" content="https://sachin-kapoor.com/blog/posts/transition-to-sustain-leadership-discipline.html" />
+    <meta property="og:image" content="https://sachin-kapoor.com/assets/images/profile-photo.png" />
+    <meta property="article:published_time" content="2026-08-30" />
+    <meta property="article:author" content="Sachin Kapoor" />
+    <meta property="article:section" content="Leadership" />
+    <link rel="canonical" href="https://sachin-kapoor.com/blog/posts/transition-to-sustain-leadership-discipline.html" />
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/blog.css?v=20260830" />
+    <script>document.documentElement.classList.add("js");try{document.documentElement.dataset.theme=localStorage.getItem("portfolio-theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(error){document.documentElement.dataset.theme="light"}</script>
+    <script src="../../assets/js/main.js" defer></script>
+    <title>Make transition-to-sustain a leadership discipline | Sachin Kapoor</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#article-content">Skip to article</a>
+    <header class="site-header" data-header><div class="container nav-shell"><a class="brand" href="../../" aria-label="Sachin Kapoor portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="../../">Portfolio</a><a href="../" aria-current="page">Blog</a><a href="../../#contact">Contact</a></nav><div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme" data-theme-toggle><span class="theme-icon" aria-hidden="true">◐</span></button><button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div></div></header>
+    <main class="article-main" id="article-content">
+      <article class="article-shell">
+        <a class="article-back" href="../">← Back to all articles</a>
+        <header class="article-header">
+          <p class="eyebrow">Leadership</p>
+          <h1>Make transition-to-sustain a leadership discipline</h1>
+          <p class="article-deck">The readiness model I used across 45+ application transitions to replace late hand-offs with explicit ownership, evidence, hypercare, and acceptance.</p>
+          <div class="article-meta"><span>By Sachin Kapoor</span><time datetime="2026-08-30">30 August 2026</time><span>6 min read</span></div>
+          <dl class="article-context"><div><dt>Experience context</dt><dd>PepsiCo GCC</dd></div><div><dt>Transformation scope</dt><dd>45+ application transitions</dd></div></dl>
+        </header>
+        <div class="article-content">
+          <p>Many production problems are designed months before go-live. They begin when operational readiness is treated as the final phase of delivery instead of a product responsibility from the start.</p>
+          <p>At PepsiCo GCC, I standardized Transition to Sustain and Release to Sustain across 45+ applications. The work involved product, engineering, security, infrastructure, SRE, service management, application support, business stakeholders, and partners. My leadership role was to turn those contributions into one evidence-based acceptance model.</p>
+
+          <h2>Start with the outcome, not the checklist</h2>
+          <p>The outcome of transition is not a completed knowledge-transfer calendar. It is a support organization that can operate the service safely, diagnose problems, execute routine changes, communicate with users, and improve the service without depending on the project team for every decision.</p>
+          <p>That definition changes the conversation. A document can exist and still be unusable. A monitoring tool can be installed and still miss the signal that matters. A support roster can be staffed and still lack decision rights. Readiness must therefore be demonstrated, not declared.</p>
+
+          <h2>Use readiness dimensions that expose risk</h2>
+          <p>I organized readiness around a small number of durable dimensions. The exact artifact may vary by application, but the questions should remain consistent.</p>
+          <ul class="principle-list">
+            <li><strong>Service and business context</strong>Who uses the service, what is critical, when are the peak periods, and what business consequence follows an outage?</li>
+            <li><strong>Architecture and dependencies</strong>Can the support team explain the service boundary, upstream and downstream dependencies, data flows, failure modes, and recovery path?</li>
+            <li><strong>Observability and reliability</strong>Are health checks, dashboards, alerts, logs, SLOs, escalation paths, backup, and recovery controls proven in realistic scenarios?</li>
+            <li><strong>Service management</strong>Are incident, request, problem, change, release, knowledge, SLA, and communication procedures connected to real owners?</li>
+            <li><strong>Security and release control</strong>Are access, vulnerability, quality, approval, deployment, rollback, and evidence requirements built into the delivery path?</li>
+            <li><strong>People, partners, and commercials</strong>Are staffing, on-call expectations, RACI, partner deliverables, licenses, renewals, and support obligations clear?</li>
+          </ul>
+
+          <h2>Move from artifact collection to proof</h2>
+          <p>A transition team can produce a large document repository and still leave the sustain team unprepared. I prefer scenario-based proof. Ask the receiving team to trace a failed transaction. Let them execute a release and rollback. Run an incident simulation. Confirm that an alert reaches the correct responder. Test the executive and user communication path.</p>
+          <p>These exercises reveal the quality of knowledge transfer and the gaps between teams. They also build confidence. The sustain team becomes an active participant in readiness rather than the recipient of a late hand-off.</p>
+
+          <h2>Create explicit gates and exceptions</h2>
+          <p>I use checkpoints to make readiness visible: early discovery, operational design, evidence review, acceptance, release readiness, and hypercare exit. Each checkpoint has an accountable owner and a clear decision - accept, accept with owned risk, or do not proceed.</p>
+          <p>Not every risk must block release. But every material exception should have a named owner, treatment plan, due date, and consequence that leaders understand. This protects the team from informal pressure and protects the business from invisible risk.</p>
+
+          <h2>Make hypercare a learning period</h2>
+          <p>Hypercare should not be an indefinite extension of the project team. I define entry and exit conditions, the support model during the period, the defects or knowledge gaps being closed, and the evidence needed for final acceptance. Incidents, user questions, deployment observations, and monitoring gaps become inputs to the runbook and backlog.</p>
+          <p>The same discipline applies to Release to Sustain. Operational readiness is not completed once for an application and forgotten. Every material release can change the dependency map, alerting needs, capacity profile, recovery procedure, or support knowledge.</p>
+
+          <blockquote>A transition is complete when the receiving team can operate the service with confidence - not when the project team has finished presenting it.</blockquote>
+
+          <h2>Closing perspective</h2>
+          <p>Standardization does not mean giving every application the same documents. It means giving leaders and teams the same language for risk, evidence, ownership, and acceptance.</p>
+          <p>Across 45+ transitions, the most important shift was cultural: sustain teams engaged earlier, engineering teams designed for operability, and leaders made conscious decisions with visible evidence. That is why I treat Transition to Sustain as a leadership discipline, not a hand-off checklist.</p>
+          <p class="article-disclosure"><strong>Professional note:</strong> This article reflects my leadership experience and personal perspective. Examples are intentionally generalized and do not disclose confidential company information.</p>
+        </div>
+        <aside class="article-author" aria-label="About the author"><img src="../../assets/images/profile-photo.png" width="70" height="70" alt="Portrait of Sachin Kapoor" /><div><h2>Sachin Kapoor</h2><p>Technology &amp; Operations Leader specializing in GCC leadership, enterprise content strategy, intelligent automation, Microsoft engineering, AI, ITSM, and SRE.</p></div></aside>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../../" aria-label="Portfolio home"><span class="brand-mark" aria-hidden="true">SK</span><span class="brand-name">Sachin Kapoor</span></a><p>Technology &amp; Operations Leader · Hyderabad, India</p></div><div class="footer-links"><a href="../">Blog</a><a href="../../#contact">Contact</a></div><p class="copyright">© <span data-current-year>2026</span> Sachin Kapoor. All rights reserved.</p></div></footer>
+  </body>
+</html>
